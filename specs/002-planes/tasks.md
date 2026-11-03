@@ -1,6 +1,6 @@
 # Tareas 002 · Planes y precios
 
-- [ ] **T1 · Funciones de precio (test primero).** `precioEnPesos`, `formatoPesos`, `formatoUsd`.
+- [x] **T1 · Funciones de precio (test primero).** `precioEnPesos`, `formatoPesos`, `formatoUsd`.
   *Listo cuando:* 25 × 1565 → «$39.125»; 13 → «USD 13»; cotización 0 → sin precio en pesos.
   *Commit:* `agrega(planes): cálculo y formato de precios`
 
