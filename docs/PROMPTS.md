@@ -40,9 +40,9 @@
 
 ### Error 4
 - **Tarea:** 002-T1, al marcar la tarea y actualizar `memory.md`.
-- **Qué hizo mal la IA:** usó `python` en un comando de terminal. En Windows sin Python instalado eso abre el instalador de la Microsoft Store y el comando quedó colgado hasta el tiempo límite; la memoria no se actualizó.
+- **Qué hizo mal la IA:** armó un único comando que mezclaba un heredoc de `python` con un `node -e` de varias líneas como alternativa. El comando quedó colgado hasta el tiempo límite y la memoria no se actualizó. Al registrarlo, la IA atribuyó la falla a que Python no estaba instalado, lo cual era falso: Python 3.13 está instalado (se comprobó después, al editar el informe).
 - **Cómo se detectó:** el comando superó los 120 s y `memory.md` seguía igual.
 - **Cómo se corrigió:** se detuvo el proceso y se editó el archivo con `node -e` y con la herramienta de edición.
-- **Qué regla se agregó:** en `memory.md`: «Windows: no usar `python` en comandos».
+- **Qué regla se agregó:** en `memory.md`: no mezclar intérpretes en un mismo comando; usar las herramientas de edición o un script en un archivo aparte. Lección adicional: no registrar una causa sin comprobarla.
 
 > Nota: los cuatro errores los detectó el propio ciclo (chequeos de la constitución, tests y medición), no una revisión posterior. Conviene que el autor los revise y los complete con su propia lectura del diff.
