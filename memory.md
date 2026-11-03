@@ -27,6 +27,7 @@
 | 2026-11-03 | Encabezado con navegación «Apps» (`routerLinkActive` + `aria-current="page"`) | Sin enlace, `/apps` solo se alcanzaba escribiendo la URL |
 | 2026-11-03 | Verificación de 001: 9 ✅, 0 ❌, 1 🖐 (RF-001-09, grilla responsiva). Pendientes: prueba a 360/600/1024 px, Tab + foco, Lighthouse, C9/C10 y `docs/PROMPTS.md` | Ver `specs/001-catalogo-apps/verificacion.md` |
 | 2026-11-03 | 002: `precioEnPesos()` devuelve `null` con cotización ausente, 0 o negativa; `formatoUsd` muestra decimales con coma solo si existen ("USD 13,5") | Caso límite de 002: sin cotización solo se muestra USD |
+| 2026-11-03 | 002: `appsDePlan()` respeta el orden de uuids del plan (no el del catálogo) y omite los que faltan | RF-002-07 |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar

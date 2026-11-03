@@ -4,7 +4,7 @@
   *Listo cuando:* 25 × 1565 → «$39.125»; 13 → «USD 13»; cotización 0 → sin precio en pesos.
   *Commit:* `agrega(planes): cálculo y formato de precios`
 
-- [ ] **T2 · Apps de cada plan (test primero).** `appsDePlan(uuids, apps)`.
+- [x] **T2 · Apps de cada plan (test primero).** `appsDePlan(uuids, apps)`.
   *Listo cuando:* devuelve las apps en orden y omite uuids inexistentes.
   *Commit:* `agrega(planes): cruce de apps incluidas por plan`
 
