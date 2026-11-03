@@ -8,7 +8,7 @@
   *Listo cuando:* devuelve las apps en orden y omite uuids inexistentes.
   *Commit:* `agrega(planes): cruce de apps incluidas por plan`
 
-- [ ] **T3 · Servicio de planes.** Lee `planes.json`, convierte precios a número, expone cotización y fecha.
+- [x] **T3 · Servicio de planes.** Lee `planes.json`, convierte precios a número, expone cotización y fecha.
   *Listo cuando:* tests de conversión y de error en verde.
   *Commit:* `agrega(planes): servicio que lee la instantánea de planes`
 
