@@ -22,7 +22,7 @@ interface InstantaneaPlanes {
   planes: PlanCrudo[];
 }
 
-const URL_PLANES = '/data/planes.json';
+const URL_PLANES = 'data/planes.json';
 
 /** Plan destacado por decisión comercial (clarificación C3 de 002), no por un dato del JSON. */
 export const PLAN_RECOMENDADO = 'Plan Escala';

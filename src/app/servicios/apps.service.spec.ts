@@ -43,20 +43,20 @@ describe('AppsService', () => {
 
   afterEach(() => http.verify());
 
-  it('arranca en estado "cargando" y pide /data/apps.json', () => {
+  it('arranca en estado "cargando" y pide data/apps.json', () => {
     expect(servicio.estado()).toBe('cargando');
     expect(servicio.apps()).toEqual([]);
-    http.expectOne('/data/apps.json');
+    http.expectOne('data/apps.json');
   });
 
   it('con datos pasa a "listo" y expone las 11 apps', () => {
-    http.expectOne('/data/apps.json').flush(instantanea(11));
+    http.expectOne('data/apps.json').flush(instantanea(11));
     expect(servicio.estado()).toBe('listo');
     expect(servicio.apps().length).toBe(11);
   });
 
   it('copia solo los campos públicos y arma la URL completa del ícono', () => {
-    http.expectOne('/data/apps.json').flush(instantanea(1));
+    http.expectOne('data/apps.json').flush(instantanea(1));
     expect(servicio.apps()[0]).toEqual({
       uuid: 'uuid-1',
       nombre: 'Willa 1',
@@ -68,21 +68,21 @@ describe('AppsService', () => {
   });
 
   it('con una lista vacía queda "listo" sin apps, no en error', () => {
-    http.expectOne('/data/apps.json').flush(instantanea(0));
+    http.expectOne('data/apps.json').flush(instantanea(0));
     expect(servicio.estado()).toBe('listo');
     expect(servicio.apps()).toEqual([]);
   });
 
   it('si la carga falla pasa a "error"', () => {
     http
-      .expectOne('/data/apps.json')
+      .expectOne('data/apps.json')
       .flush('No encontrado', { status: 404, statusText: 'Not Found' });
     expect(servicio.estado()).toBe('error');
     expect(servicio.apps()).toEqual([]);
   });
 
   it('si el JSON no trae la lista de apps pasa a "error"', () => {
-    http.expectOne('/data/apps.json').flush({ fuente: 'x' });
+    http.expectOne('data/apps.json').flush({ fuente: 'x' });
     expect(servicio.estado()).toBe('error');
   });
 });

@@ -39,30 +39,30 @@ describe('PlanesService', () => {
 
   afterEach(() => http.verify());
 
-  it('arranca en estado "cargando" y pide /data/planes.json', () => {
+  it('arranca en estado "cargando" y pide data/planes.json', () => {
     expect(servicio.estado()).toBe('cargando');
-    http.expectOne('/data/planes.json');
+    http.expectOne('data/planes.json');
   });
 
   it('convierte el precio de texto a número', () => {
-    http.expectOne('/data/planes.json').flush(INSTANTANEA);
+    http.expectOne('data/planes.json').flush(INSTANTANEA);
     expect(servicio.estado()).toBe('listo');
     expect(servicio.planes().map((p) => p.precioUsd)).toEqual([13, 25]);
   });
 
   it('expone la cotización y la fecha de captura', () => {
-    http.expectOne('/data/planes.json').flush(INSTANTANEA);
+    http.expectOne('data/planes.json').flush(INSTANTANEA);
     expect(servicio.cotizacion()).toBe(1565);
     expect(servicio.fecha()).toBe('2026-11-03');
   });
 
   it('marca Plan Escala como recomendado', () => {
-    http.expectOne('/data/planes.json').flush(INSTANTANEA);
+    http.expectOne('data/planes.json').flush(INSTANTANEA);
     expect(servicio.planes().map((p) => p.recomendado)).toEqual([false, true]);
   });
 
   it('copia límites, soporte y apps, y no copia el campo chatbot', () => {
-    http.expectOne('/data/planes.json').flush(INSTANTANEA);
+    http.expectOne('data/planes.json').flush(INSTANTANEA);
     const plan = servicio.planes()[1];
     expect(plan.maxSucursales).toBe(5);
     expect(plan.maxUsuarios).toBe(15);
@@ -72,20 +72,20 @@ describe('PlanesService', () => {
   });
 
   it('sin cotización expone null', () => {
-    http.expectOne('/data/planes.json').flush({ ...INSTANTANEA, cotizacion_usd: undefined });
+    http.expectOne('data/planes.json').flush({ ...INSTANTANEA, cotizacion_usd: undefined });
     expect(servicio.cotizacion()).toBeNull();
   });
 
   it('si la carga falla pasa a "error"', () => {
     http
-      .expectOne('/data/planes.json')
+      .expectOne('data/planes.json')
       .flush('Error', { status: 500, statusText: 'Server Error' });
     expect(servicio.estado()).toBe('error');
     expect(servicio.planes()).toEqual([]);
   });
 
   it('si el JSON no trae la lista de planes pasa a "error"', () => {
-    http.expectOne('/data/planes.json').flush({ capturado: '2026-11-03' });
+    http.expectOne('data/planes.json').flush({ capturado: '2026-11-03' });
     expect(servicio.estado()).toBe('error');
   });
 });

@@ -41,6 +41,7 @@
 | 2026-11-03 | Validación de 003 en funciones puras (`errorDeCampo`, `erroresConsulta`) sin Angular; el formulario las envuelve como `ValidatorFn`. Largos medidos después de `limpiar()` y en caracteres visibles (`Array.from`: un emoji = 1) | Principio 3; RF-003-04 y 09 |
 | 2026-11-03 | `/consulta`: errores visibles solo con el campo `touched` (al salir o al enviar); al enviar con errores se enfoca el primer campo inválido; el contador del mensaje va en `aria-describedby`; `abrirWhatsApp()` es público para espiarlo en tests | RF-003-05, C6 de 003 |
 | 2026-11-03 | Navegación: Apps · Planes · Quiero mi web, con `flex-wrap` para 360 px | Acceso a las tres páginas |
+| 2026-11-03 | Producción en `willalogic.com.ar/TFI/`: `baseHref: "/TFI/"` solo en la configuración `production` de `angular.json` (`npm start` sigue en `/`) | Pedido del autor |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
@@ -50,6 +51,8 @@
 - Los precios en pesos se formatean con `toLocaleString('es-AR')`: punto para miles.
 - Los tests que renderizan `App` necesitan `provideRouter([])` porque el encabezado usa `routerLink`.
 - Las imágenes de `public/` se referencian sin `/public`: `marca/logo-willalogic.png`.
+- **Nunca rutas absolutas** a recursos (`/data/...`, `/marca/...`): el sitio vive en `/TFI/`. Usar rutas relativas (`data/apps.json`), que se resuelven contra `<base href>`.
+- El servidor de `/TFI/` tiene que devolver `/TFI/index.html` para rutas desconocidas (`/TFI/planes` al recargar), si no da 404.
 - Tests de servicios con HTTP: `provideHttpClient()` + `provideHttpClientTesting()` y `HttpTestingController.verify()` en `afterEach`.
 - Componentes: archivos con sufijo `.component.*` y clase `…Component` (07-CONVENCIONES), aunque Angular 21 genere sin sufijo. Inputs con `input.required<…>()` y en tests `fixture.componentRef.setInput(…)`.
 - Tests de páginas: reemplazar el servicio con `{ provide: AppsService, useValue: { apps, estado } }` usando señales, sin HTTP.

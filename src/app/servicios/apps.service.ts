@@ -10,7 +10,7 @@ interface InstantaneaApps {
   apps: AppWilla[];
 }
 
-const URL_APPS = '/data/apps.json';
+const URL_APPS = 'data/apps.json';
 
 /** Lee la instantánea de apps y la entrega como señales. */
 @Injectable({ providedIn: 'root' })
