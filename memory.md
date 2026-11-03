@@ -33,6 +33,7 @@
 | 2026-11-03 | En `/planes` el único botón primario es el del plan recomendado; los otros «Quiero este plan» son secundarios | 06-DISENO-UI: un solo botón primario por pantalla |
 | 2026-11-03 | Texto negro del botón primario = `var(--bg-primary)` | No hay token "negro"; Noche Profunda es casi negro |
 | 2026-11-03 | `/planes`: fecha de cotización en `DD/MM/AAAA` con `formatoFecha()` (sin `Date`, para no correr el día por zona horaria); sin cotización se oculta el aviso; grilla 1 → 3 columnas desde 1024 px; título «Planes y precios · WillaLogic» | RF-002-04 no fija el formato de fecha; 09-SEO no define título |
+| 2026-11-03 | Verificación de 002: 9 ✅, 0 ❌, 1 🖐 (RF-002-09, depende de `/consulta`). D1 y D2 de 002 siguen sin decidir | Ver `specs/002-planes/verificacion.md` |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar

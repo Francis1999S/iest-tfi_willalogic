@@ -20,5 +20,5 @@
   *Listo cuando:* test que muestra 3 planes; se ve bien a 360 px.
   *Commit:* `agrega(planes): página de planes`
 
-- [ ] **T6 · Verificación.** `/verificar 002-planes`.
+- [x] **T6 · Verificación.** `/verificar 002-planes`.
   *Commit:* `docs(002): verificación de planes`
