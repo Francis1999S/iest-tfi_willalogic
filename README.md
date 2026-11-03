@@ -2,9 +2,9 @@
 
 Sitio comercial de **WillaLogic**, plataforma SaaS de gestión hecha en Tinogasta, Catamarca. Trabajo Final Integrador de Inteligencia Artificial (IEST, 2026), desarrollado con el ciclo de **Desarrollo Guiado por Especificaciones** y agentes de IA.
 
-- **Sitio publicado:** [completar URL]
-- **Video promocional:** [completar enlace de YouTube]
-- **Video demo:** [completar enlace]
+- **Sitio publicado:** www.willalogic.com.ar/TFI/
+- **Video promocional:** https://youtu.be/SCc0Tm5Ud_o
+- **Video demo:** https://youtu.be/Qai3TrpdoUI
 
 ## Qué incluye
 
