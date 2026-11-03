@@ -39,6 +39,8 @@
 | 2026-11-03 | `limpiar()` colapsa espacios repetidos y recorta cada línea, pero conserva los saltos de línea del mensaje | RF-003-09 |
 | 2026-11-03 | `interesDesdeUrl()`: coincidencia exacta (distingue mayúsculas) tras recortar espacios; cualquier otro valor → vacío | Lista blanca estricta (C3 de 003) |
 | 2026-11-03 | Validación de 003 en funciones puras (`errorDeCampo`, `erroresConsulta`) sin Angular; el formulario las envuelve como `ValidatorFn`. Largos medidos después de `limpiar()` y en caracteres visibles (`Array.from`: un emoji = 1) | Principio 3; RF-003-04 y 09 |
+| 2026-11-03 | `/consulta`: errores visibles solo con el campo `touched` (al salir o al enviar); al enviar con errores se enfoca el primer campo inválido; el contador del mensaje va en `aria-describedby`; `abrirWhatsApp()` es público para espiarlo en tests | RF-003-05, C6 de 003 |
+| 2026-11-03 | Navegación: Apps · Planes · Quiero mi web, con `flex-wrap` para 360 px | Acceso a las tres páginas |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar

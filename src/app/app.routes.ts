@@ -15,4 +15,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./paginas/planes/planes.component').then((m) => m.PlanesComponent),
   },
+  {
+    path: 'consulta',
+    title: 'Quiero mi web · WillaLogic',
+    loadComponent: () =>
+      import('./paginas/consulta/consulta.component').then((m) => m.ConsultaComponent),
+  },
 ];

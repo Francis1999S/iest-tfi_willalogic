@@ -12,7 +12,7 @@
   *Listo cuando:* tests de largos y obligatorios pasan.
   *Commit:* `agrega(consulta): validación del formulario`
 
-- [ ] **T4 · Página `/consulta`.** Formulario con etiquetas visibles, errores con `aria-describedby`, contador del mensaje, aviso «No guardamos tus datos…», botón «Enviar por WhatsApp».
+- [x] **T4 · Página `/consulta`.** Formulario con etiquetas visibles, errores con `aria-describedby`, contador del mensaje, aviso «No guardamos tus datos…», botón «Enviar por WhatsApp».
   *Listo cuando:* test que no abre WhatsApp con errores y sí con datos válidos; navegable con Tab.
   *Commit:* `agrega(consulta): página de consulta`
 

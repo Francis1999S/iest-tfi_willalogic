@@ -1,0 +1,119 @@
+<section class="wl-consulta">
+  <h1 class="wl-consulta__titulo">Quiero mi <span class="wl-destacado">web</span></h1>
+  <p class="wl-consulta__intro">
+    Contanos quién sos y qué necesitás. Armamos el mensaje y lo mandás desde tu WhatsApp.
+  </p>
+
+  <form class="wl-consulta__form" [formGroup]="form" (ngSubmit)="enviar()" novalidate>
+    <div class="wl-consulta__campo">
+      <label for="wl-consulta-nombre">Tu nombre</label>
+      <input
+        id="wl-consulta-nombre"
+        type="text"
+        formControlName="nombre"
+        autocomplete="name"
+        [attr.aria-invalid]="error('nombre') ? 'true' : null"
+        [attr.aria-describedby]="error('nombre') ? 'wl-consulta-nombre-error' : null"
+      />
+      @if (error('nombre'); as mensaje) {
+        <p id="wl-consulta-nombre-error" class="wl-consulta__error">{{ mensaje }}</p>
+      }
+    </div>
+
+    <div class="wl-consulta__campo">
+      <label for="wl-consulta-negocio">Nombre del negocio</label>
+      <input
+        id="wl-consulta-negocio"
+        type="text"
+        formControlName="negocio"
+        autocomplete="organization"
+        [attr.aria-invalid]="error('negocio') ? 'true' : null"
+        [attr.aria-describedby]="error('negocio') ? 'wl-consulta-negocio-error' : null"
+      />
+      @if (error('negocio'); as mensaje) {
+        <p id="wl-consulta-negocio-error" class="wl-consulta__error">{{ mensaje }}</p>
+      }
+    </div>
+
+    <div class="wl-consulta__fila">
+      <div class="wl-consulta__campo">
+        <label for="wl-consulta-rubro">Rubro (opcional)</label>
+        <input
+          id="wl-consulta-rubro"
+          type="text"
+          formControlName="rubro"
+          placeholder="Por ejemplo: almacén"
+          [attr.aria-invalid]="error('rubro') ? 'true' : null"
+          [attr.aria-describedby]="error('rubro') ? 'wl-consulta-rubro-error' : null"
+        />
+        @if (error('rubro'); as mensaje) {
+          <p id="wl-consulta-rubro-error" class="wl-consulta__error">{{ mensaje }}</p>
+        }
+      </div>
+
+      <div class="wl-consulta__campo">
+        <label for="wl-consulta-localidad">Localidad (opcional)</label>
+        <input
+          id="wl-consulta-localidad"
+          type="text"
+          formControlName="localidad"
+          autocomplete="address-level2"
+          [attr.aria-invalid]="error('localidad') ? 'true' : null"
+          [attr.aria-describedby]="error('localidad') ? 'wl-consulta-localidad-error' : null"
+        />
+        @if (error('localidad'); as mensaje) {
+          <p id="wl-consulta-localidad-error" class="wl-consulta__error">{{ mensaje }}</p>
+        }
+      </div>
+    </div>
+
+    <div class="wl-consulta__campo">
+      <label for="wl-consulta-interes">¿Qué te interesa?</label>
+      <select
+        id="wl-consulta-interes"
+        formControlName="interes"
+        [attr.aria-invalid]="error('interes') ? 'true' : null"
+        [attr.aria-describedby]="error('interes') ? 'wl-consulta-interes-error' : null"
+      >
+        <option value="">Elegí una opción</option>
+        @for (interes of intereses; track interes) {
+          <option [value]="interes">{{ interes }}</option>
+        }
+      </select>
+      @if (error('interes'); as mensaje) {
+        <p id="wl-consulta-interes-error" class="wl-consulta__error">{{ mensaje }}</p>
+      }
+    </div>
+
+    <div class="wl-consulta__campo">
+      <label for="wl-consulta-mensaje">Tu mensaje</label>
+      <textarea
+        id="wl-consulta-mensaje"
+        formControlName="mensaje"
+        rows="5"
+        [attr.aria-invalid]="error('mensaje') ? 'true' : null"
+        [attr.aria-describedby]="
+          error('mensaje')
+            ? 'wl-consulta-mensaje-contador wl-consulta-mensaje-error'
+            : 'wl-consulta-mensaje-contador'
+        "
+      ></textarea>
+      <p
+        id="wl-consulta-mensaje-contador"
+        class="wl-consulta__contador"
+        [class.wl-consulta__contador--excedido]="largoMensaje() > maxMensaje"
+      >
+        {{ largoMensaje() }} / {{ maxMensaje }}
+      </p>
+      @if (error('mensaje'); as mensaje) {
+        <p id="wl-consulta-mensaje-error" class="wl-consulta__error">{{ mensaje }}</p>
+      }
+    </div>
+
+    <p class="wl-consulta__privacidad">
+      No guardamos tus datos: la consulta se envía directamente desde tu WhatsApp.
+    </p>
+
+    <button class="wl-consulta__boton" type="submit">Enviar por WhatsApp</button>
+  </form>
+</section>
