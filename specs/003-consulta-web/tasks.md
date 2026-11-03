@@ -8,7 +8,7 @@
   *Listo cuando:* «Plan Escala» se acepta; `<script>` y valores desconocidos se ignoran.
   *Commit:* `agrega(consulta): plan elegido desde la página de planes`
 
-- [ ] **T3 · Validaciones (test primero).** Reglas y mensajes de error.
+- [x] **T3 · Validaciones (test primero).** Reglas y mensajes de error.
   *Listo cuando:* tests de largos y obligatorios pasan.
   *Commit:* `agrega(consulta): validación del formulario`
 
