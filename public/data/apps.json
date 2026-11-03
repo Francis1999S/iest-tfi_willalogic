@@ -1,0 +1,129 @@
+{
+  "fuente": "https://willalogic.com.ar/api/apps",
+  "capturado": "2026-11-03",
+  "base_iconos": "https://willalogic.com.ar/PUBLIC_SRC/APPS_ICONS/",
+  "cotizacion_usd": 1565,
+  "apps": [
+    {
+      "uuid": "1789b0bf-4baf-11f1-b287-40ed00185326",
+      "slug": "WF",
+      "ruta": "WFinance",
+      "nombre": "Willa Finance",
+      "descripcion": "Aplicación de Finanzas para Empresas",
+      "version": "0.4.0",
+      "color": "#C62828",
+      "logo": "willafinance.jpg",
+      "precio_individual": "5"
+    },
+    {
+      "uuid": "1789b378-4baf-11f1-b287-40ed00185326",
+      "slug": "WS",
+      "ruta": "WStock",
+      "nombre": "Willa Stock",
+      "descripcion": "Aplicación de Gestión de Inventario",
+      "version": "1.3.0",
+      "color": "#244A85",
+      "logo": "willastock.jpg",
+      "precio_individual": "5"
+    },
+    {
+      "uuid": "1789b429-4baf-11f1-b287-40ed00185326",
+      "slug": "WPos",
+      "ruta": "WPos",
+      "nombre": "Willa POS",
+      "descripcion": "Aplicación de Punto de Venta para Negocios",
+      "version": "1.4.0",
+      "color": "#5fa800",
+      "logo": "willapos.png",
+      "precio_individual": "5"
+    },
+    {
+      "uuid": "1789b4b3-4baf-11f1-b287-40ed00185326",
+      "slug": "WA",
+      "ruta": "WAgenda",
+      "nombre": "Willa Sessions",
+      "descripcion": "Aplicación para la gestión de turnos en general para organizaciones",
+      "version": "1.0.0",
+      "color": "#832171",
+      "logo": "willasessions.png",
+      "precio_individual": "5"
+    },
+    {
+      "uuid": "1789b53e-4baf-11f1-b287-40ed00185326",
+      "slug": "WCC",
+      "ruta": "WCC",
+      "nombre": "Willa Community Center",
+      "descripcion": "Aplicación para la creación de cuentas para clientes.",
+      "version": "0.0.0",
+      "color": "#f00054",
+      "logo": "willacc.png",
+      "precio_individual": "5"
+    },
+    {
+      "uuid": "7c7dd5ff-70f0-4559-800f-977b5af45cd7",
+      "slug": "WP",
+      "ruta": "WPersonas",
+      "nombre": "Willa Personas",
+      "descripcion": "Aplicación para la gestión básica de recursos humanos.",
+      "version": "1.0.0",
+      "color": "#00489C",
+      "logo": "willapersonas.png",
+      "precio_individual": "5"
+    },
+    {
+      "uuid": "7c7ddaa1-70f0-4559-800f-977b5af45cd7",
+      "slug": "WSport",
+      "ruta": "WSport",
+      "nombre": "Willa Sport",
+      "descripcion": "Aplicación para la gestión de complejos deportivos o empresas relacionadas con el deporte",
+      "version": "0.0.1",
+      "color": "#95FF00",
+      "logo": "willasport_1.png",
+      "precio_individual": "10"
+    },
+    {
+      "uuid": "1789aw11-4baf-11f1-b287-40ed00185326",
+      "slug": "WT",
+      "ruta": "WTramites",
+      "nombre": "Willa Tramites",
+      "descripcion": "Aplicación para la gestión general de Trámites",
+      "version": "0.0.1",
+      "color": "#00B2D6",
+      "logo": "willatramites.png",
+      "precio_individual": "7"
+    },
+    {
+      "uuid": "1789mm22-4baf-11f1-b287-40ed00185326",
+      "slug": "WC",
+      "ruta": "WCatalogo",
+      "nombre": "Willa Catálogo",
+      "descripcion": "Aplicación para la publicación de productos mediante catálogo público.",
+      "version": "0.0.1",
+      "color": "#8300CF",
+      "logo": "willacatalogo_1.png",
+      "precio_individual": "3"
+    },
+    {
+      "uuid": "3c565a55-bdac-11f1-b287-40ed00185326",
+      "slug": "WPu",
+      "ruta": "WPuntos",
+      "nombre": "Willa Puntos",
+      "descripcion": "Sistema de fidelización por puntos para comercios",
+      "version": "0.1.0",
+      "color": "#FFB300",
+      "logo": "willapuntos.png",
+      "precio_individual": "5"
+    },
+    {
+      "uuid": "1fghb0bf-4baf-11f1-b287-40ed00185326",
+      "slug": "WSTRM",
+      "ruta": "WStream",
+      "nombre": "Willa Stream",
+      "descripcion": "Aplicacion para la gestion de streaming en vivo y generador de shorts",
+      "version": "0.0.1",
+      "color": "#D44200",
+      "logo": "willastream.png",
+      "precio_individual": "10"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "fuente": "API pública de planes de WillaLogic",
+  "capturado": "2026-11-03",
+  "cotizacion_usd": 1565,
+  "planes": [
+    {
+      "uuid": "2398e6e3-4cca-11f1-bd26-00e04c3602ba",
+      "nombre": "Plan Crecimiento",
+      "tipo": "MultiApp Plan",
+      "precio_usd": "13.00",
+      "descripcion": "Tomá el control de tu negocio en un solo sistema.\nVentas, stock y finanzas conectadas para que sepas exactamente qué está pasando, en tiempo real.\n\nPerfecto para comercios que quieren ordenar su operación, evitar pérdidas y empezar a crecer con datos claros.",
+      "max_sucursales": 1,
+      "max_usuarios": 5,
+      "soporte": "Prioritario",
+      "apps": [
+        "1789b0bf-4baf-11f1-b287-40ed00185326",
+        "1789b378-4baf-11f1-b287-40ed00185326",
+        "1789b429-4baf-11f1-b287-40ed00185326"
+      ]
+    },
+    {
+      "uuid": "23990e03-4cca-11f1-bd26-00e04c3602ba",
+      "nombre": "Plan Escala",
+      "tipo": "MultiApp Plan",
+      "precio_usd": "25.00",
+      "descripcion": "Operá y expandí tu empresa sin límites ni cuellos de botella.\nGestioná múltiples sucursales, equipos grandes y procesos complejos con estabilidad, control y soporte continuo.\n\nPensado para empresas que necesitan velocidad, control total y cero margen de error.",
+      "max_sucursales": 5,
+      "max_usuarios": 15,
+      "soporte": "24/7",
+      "apps": [
+        "1789b378-4baf-11f1-b287-40ed00185326",
+        "1789b429-4baf-11f1-b287-40ed00185326",
+        "1789b0bf-4baf-11f1-b287-40ed00185326"
+      ]
+    },
+    {
+      "uuid": "357d874f-93f2-4738-a8be-206d6e4b9cd1",
+      "nombre": "Plan E-Gov",
+      "tipo": "Pack",
+      "precio_usd": "360.00",
+      "descripcion": "Plan para gobierno que ofrece un conjunto de aplicaciones compatibles con necesidades de gestión pública.",
+      "max_sucursales": 40,
+      "max_usuarios": 200,
+      "soporte": "Prioritario",
+      "apps": [
+        "1789b53e-4baf-11f1-b287-40ed00185326",
+        "7c7dd5ff-70f0-4559-800f-977b5af45cd7"
+      ]
+    }
+  ]
+}
