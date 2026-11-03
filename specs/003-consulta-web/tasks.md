@@ -20,5 +20,5 @@
   *Listo cuando:* Lighthouse ≥ 80 en las cuatro categorías en local.
   *Commit:* `agrega(sitio): inicio, navegación y SEO`
 
-- [ ] **T6 · Verificación.** `/verificar 003-consulta-web`.
+- [x] **T6 · Verificación.** `/verificar 003-consulta-web`.
   *Commit:* `docs(003): verificación de la consulta`

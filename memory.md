@@ -45,6 +45,7 @@
 | 2026-11-03 | Inicio `/` con textos tomados de IDENTIDAD-MARCA y 09-SEO; ruta comodín `**` → inicio; canonical, Open Graph, `robots.txt` y `sitemap.xml` apuntan a `https://willalogic.com.ar/TFI/`; `og:image` usa el logo hasta tener la imagen de 1200 × 630 | Sin imágenes en `multimedia/`: la leyenda «Generado con IA» queda pendiente |
 | 2026-11-03 | Lighthouse local (móvil, 003-T5): inicio 86/100/100/100, apps 84/100/100/100, planes 86/100/100/100, consulta 87/100/100/100 (Rend./Acc./BP/SEO) | Principio 6 |
 | 2026-11-03 | Sin `<meta name="theme-color">`: obligaría a escribir un hex fuera de `tokens.css` | Principio 2 |
+| 2026-11-03 | Verificación de 003: 10 ✅, 0 ❌. Pendientes manuales: celular, escritorio, teclado y flujo planes → consulta. Despliegue: respaldo a `/TFI/index.html` y `Sitemap:` en el `robots.txt` raíz | Ver `specs/003-consulta-web/verificacion.md` |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
