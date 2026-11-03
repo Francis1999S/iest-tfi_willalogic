@@ -22,6 +22,9 @@
 | 2026-11-03 | El nombre de la app en la tarjeta es `<h2>` (la página `/apps` lleva el único `<h1>`) | Encabezados en orden |
 | 2026-11-03 | La insignia de respaldo es `role="img"` con `aria-label="Ícono de …"` y fondo `color-mix(--color-app 70 %, --bg-primary)` con siglas en `--text-white` | Colores claros como `#5fa800` no dan contraste AA con texto blanco si se usan puros |
 | 2026-11-03 | Bordes "dorado al 20 %" con `color-mix(in srgb, var(--gold-brand) 20%, transparent)` | El ejemplo de 06-DISENO-UI usa `rgba(...)` a mano, que viola el principio 2 |
+| 2026-11-03 | Ruta `/apps` con carga diferida (`loadComponent`) y título «Aplicaciones Willa · WillaLogic» | 09-SEO no define título para `/apps`; a confirmar por el autor |
+| 2026-11-03 | Lista vacía con el buscador vacío muestra «Todavía no hay apps para mostrar.»; el mensaje de RF-001-05 se usa solo si hay texto buscado | Evita mostrar `con ""` en el caso límite de la lista vacía |
+| 2026-11-03 | Encabezado con navegación «Apps» (`routerLinkActive` + `aria-current="page"`) | Sin enlace, `/apps` solo se alcanzaba escribiendo la URL |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
@@ -33,6 +36,9 @@
 - Las imágenes de `public/` se referencian sin `/public`: `marca/logo-willalogic.png`.
 - Tests de servicios con HTTP: `provideHttpClient()` + `provideHttpClientTesting()` y `HttpTestingController.verify()` en `afterEach`.
 - Componentes: archivos con sufijo `.component.*` y clase `…Component` (07-CONVENCIONES), aunque Angular 21 genere sin sufijo. Inputs con `input.required<…>()` y en tests `fixture.componentRef.setInput(…)`.
+- Tests de páginas: reemplazar el servicio con `{ provide: AppsService, useValue: { apps, estado } }` usando señales, sin HTTP.
+- Leer el valor de un `<input>` con referencia de plantilla (`#campo` → `campo.value`), nunca con `$any($event.target)`.
+- La región `aria-live` tiene que existir siempre en el DOM; solo cambia su contenido, si no el lector de pantalla no anuncia.
 - Los `.spec.ts` pueden tener colores como dato de prueba (`'#244A85'`); el chequeo de colores a mano aplica a estilos y plantillas.
 
 ## Errores ya resueltos

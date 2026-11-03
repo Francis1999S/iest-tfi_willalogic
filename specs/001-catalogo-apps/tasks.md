@@ -22,7 +22,7 @@
   *Listo cuando:* test que verifica `alt="Ícono de Willa Stock"`; sin colores a mano en el CSS.
   *Commit:* `agrega(catalogo): tarjeta de aplicación`
 
-- [ ] **T5 · Página `/apps`.** Título, buscador con etiqueta visible, grilla responsiva, estados de carga, error y sin resultados (`aria-live`).
+- [x] **T5 · Página `/apps`.** Título, buscador con etiqueta visible, grilla responsiva, estados de carga, error y sin resultados (`aria-live`).
   *Listo cuando:* test que muestra 11 tarjetas y el mensaje de sin resultados; se ve bien a 360 px.
   *Commit:* `agrega(catalogo): página de catálogo con buscador`
 

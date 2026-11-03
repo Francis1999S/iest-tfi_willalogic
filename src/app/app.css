@@ -23,6 +23,23 @@
   height: 64px;
 }
 
+.wl-encabezado__nav {
+  margin-left: auto;
+}
+
+.wl-encabezado__nav a {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-white);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wl-encabezado__nav a:hover,
+.wl-encabezado__nav a.wl-activo {
+  color: var(--gold);
+}
+
 .wl-contenido {
   flex: 1;
   width: 100%;

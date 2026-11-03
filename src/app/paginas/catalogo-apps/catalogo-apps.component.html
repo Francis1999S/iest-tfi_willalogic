@@ -1,0 +1,46 @@
+<section class="wl-catalogo">
+  <h1 class="wl-catalogo__titulo">Aplicaciones <span class="wl-destacado">Willa</span></h1>
+
+  @switch (estado()) {
+    @case ('cargando') {
+      <p class="wl-catalogo__estado" role="status">Cargando apps…</p>
+    }
+    @case ('error') {
+      <p class="wl-catalogo__estado wl-catalogo__estado--error" role="alert">
+        No pudimos cargar las apps. Recargá la página.
+      </p>
+    }
+    @case ('listo') {
+      <div class="wl-catalogo__buscador">
+        <label for="wl-buscar-app">Buscá una app</label>
+        <input
+          #campo
+          id="wl-buscar-app"
+          type="search"
+          autocomplete="off"
+          placeholder="Por ejemplo: stock, turnos, trámites"
+          [value]="texto()"
+          (input)="texto.set(campo.value)"
+        />
+      </div>
+
+      <p class="wl-catalogo__estado" aria-live="polite">
+        @if (visibles().length === 0) {
+          @if (busqueda()) {
+            No encontramos apps con "{{ busqueda() }}". Probá con otra palabra.
+          } @else {
+            Todavía no hay apps para mostrar.
+          }
+        }
+      </p>
+
+      @if (visibles().length > 0) {
+        <ul class="wl-catalogo__grilla">
+          @for (app of visibles(); track app.uuid) {
+            <li><wl-tarjeta-app [app]="app" /></li>
+          }
+        </ul>
+      }
+    }
+  }
+</section>
