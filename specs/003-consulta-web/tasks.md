@@ -1,6 +1,6 @@
 # Tareas 003 · Consulta «Quiero mi web»
 
-- [ ] **T1 · Armado del mensaje y enlace (test primero).** `limpiar`, `armarMensaje`, `enlaceWhatsApp`, constantes.
+- [x] **T1 · Armado del mensaje y enlace (test primero).** `limpiar`, `armarMensaje`, `enlaceWhatsApp`, constantes.
   *Listo cuando:* tests de mensaje completo, sin opcionales y con `&`/`#` pasan.
   *Commit:* `agrega(consulta): armado del mensaje de WhatsApp`
 
