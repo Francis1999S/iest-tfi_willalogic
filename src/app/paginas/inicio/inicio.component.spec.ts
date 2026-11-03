@@ -35,6 +35,30 @@ describe('InicioComponent', () => {
   it('tiene un solo botón primario', () => {
     expect(elemento.querySelectorAll('.wl-boton-primario').length).toBe(1);
   });
+
+  it('muestra el video promocional sin cookies, con título y carga diferida', () => {
+    const reproductor = elemento.querySelector('iframe');
+    expect(reproductor?.getAttribute('src')).toBe(
+      'https://www.youtube-nocookie.com/embed/SCc0Tm5Ud_o',
+    );
+    expect(reproductor?.getAttribute('title')).toBe('Video promocional de WillaLogic');
+    expect(reproductor?.getAttribute('loading')).toBe('lazy');
+  });
+
+  it('identifica el video como generado con IA', () => {
+    expect(elemento.querySelector('figcaption')?.textContent?.replace(/\s+/g, ' ')).toContain(
+      'Generado con IA: clips de VidoGrid (Veo 3.1) y voz de ElevenLabs, editado por el autor.',
+    );
+  });
+
+  it('ofrece el enlace a YouTube fuera del reproductor', () => {
+    const enlace = elemento.querySelector<HTMLAnchorElement>(
+      'a[href="https://youtu.be/SCc0Tm5Ud_o"]',
+    );
+    expect(enlace?.textContent?.trim()).toBe('Ver el video en YouTube');
+    expect(enlace?.getAttribute('rel')).toContain('noopener');
+    expect(enlace?.closest('iframe')).toBeNull();
+  });
 });
 
 describe('rutas', () => {

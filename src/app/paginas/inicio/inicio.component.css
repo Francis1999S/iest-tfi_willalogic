@@ -95,3 +95,33 @@
 .wl-inicio__acceso-texto {
   color: var(--text-muted);
 }
+
+.wl-inicio__video {
+  padding-top: 2.5rem;
+}
+
+.wl-inicio__figura {
+  max-width: 48rem;
+  margin: 0 0 1rem;
+}
+
+/* 16:9 a cualquier ancho, desde 360 px */
+.wl-inicio__reproductor {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid color-mix(in srgb, var(--gold-brand) 20%, transparent);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.wl-inicio__leyenda {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.wl-inicio__enlace-video {
+  color: var(--gold);
+  font-weight: 600;
+}

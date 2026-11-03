@@ -46,6 +46,7 @@
 | 2026-11-03 | Lighthouse local (móvil, 003-T5): inicio 86/100/100/100, apps 84/100/100/100, planes 86/100/100/100, consulta 87/100/100/100 (Rend./Acc./BP/SEO) | Principio 6 |
 | 2026-11-03 | Sin `<meta name="theme-color">`: obligaría a escribir un hex fuera de `tokens.css` | Principio 2 |
 | 2026-11-03 | Verificación de 003: 10 ✅, 0 ❌. Pendientes manuales: celular, escritorio, teclado y flujo planes → consulta. Despliegue: respaldo a `/TFI/index.html` y `Sitemap:` en el `robots.txt` raíz | Ver `specs/003-consulta-web/verificacion.md` |
+| 2026-11-03 | Video promocional en el inicio (RF-003-11 y 12): iframe de `youtube-nocookie.com` con URL fija en la plantilla (sin binding, así no hace falta confiar la URL), `loading="lazy"`, `title`, leyenda «Generado con IA…» en `figcaption` y enlace a YouTube fuera del iframe. Lighthouse del inicio: 95/100/96/100 (el 96 es un aviso del inspector por el iframe) | Pedido de la cátedra; principios 5 y 8 |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
