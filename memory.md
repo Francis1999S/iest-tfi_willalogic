@@ -16,6 +16,7 @@
 | 2026-11-03 | Inter se carga desde Google Fonts en `index.html` (400, 600, 800); la pila tipográfica vive en `--font-base` de `tokens.css` | Sin dependencias nuevas; la fuente sale de los tokens |
 | 2026-11-03 | `AppWilla` tipa solo los 6 campos de C2 (uuid, nombre, descripcion, color, logo, version); los extras de `apps.json` se ignoran | Independiente de la decisión pendiente C9 |
 | 2026-11-03 | `normalizar()` quita diacríticos con NFD, así que también "ñ" → "n" | Aceptado: buscar "pena" también encuentra "peña"; con 11 apps no molesta |
+| 2026-11-03 | `siglasApp()` sale del `nombre`, no del `slug`, y no limita la cantidad de letras | Así lo fija el plan; los 11 nombres actuales tienen como máximo 3 palabras ("WCC") |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar

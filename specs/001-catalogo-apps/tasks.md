@@ -10,7 +10,7 @@
   *Listo cuando:* los tests de vacío, mayúsculas, tildes, espacios y sin resultados pasan.
   *Commit:* `agrega(catalogo): filtro de apps sin tildes ni mayúsculas`
 
-- [ ] **T2 · Siglas de respaldo (test primero).** `siglasApp()`.
+- [x] **T2 · Siglas de respaldo (test primero).** `siglasApp()`.
   *Listo cuando:* "Willa Stock" → "WS", "Willa Community Center" → "WCC", texto vacío → "W".
   *Commit:* `agrega(catalogo): siglas para íconos que no cargan`
 
