@@ -1,6 +1,6 @@
 # Enlaces · seura-francis_willalogic-tfi
 
-- Repositorio: https://github.com/[usuario]/iest-tfi_willalogic
-- Sitio publicado: [URL]
-- Video promocional: [YouTube]
-- Video demo: [YouTube o MP4]
+- Repositorio: https://github.com/Francis1999S/iest-tfi_willalogic
+- Sitio publicado: https://willalogic.com.ar/TFI/
+- Video promocional: https://youtu.be/SCc0Tm5Ud_o
+- Video demo: https://youtu.be/Qai3TrpdoUI
