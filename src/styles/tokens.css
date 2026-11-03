@@ -1,0 +1,22 @@
+/* Tokens de marca copiados de docs/IDENTIDAD-MARCA.md.
+   Único archivo del sitio donde se escriben colores. */
+:root {
+  --bg-primary:   #0b0e14;  /* Noche Profunda */
+  --bg-secondary: #0f1520;
+  --bg-card:      #131926;  /* Azul Pizarra */
+  --gold:         #f4dd9e;  /* Oro Claro */
+  --gold-brand:   #caa97a;  /* Dorado Willa */
+  --bronze:       #80623b;  /* Bronce Lógica */
+  --text-white:   #f0f0f0;  /* Blanco Niebla */
+  --text-muted:   #8a94a8;  /* Gris Bruma */
+
+  --color-correcto: #4caf50;
+  --color-atencion: #ffb300;
+  --color-error:    #ef5350;
+
+  --radius:    14px;
+  --radius-sm: 8px;
+
+  /* Orden de carga de la tipografía (IDENTIDAD-MARCA.md · Tipografía) */
+  --font-base: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+}

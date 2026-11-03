@@ -11,12 +11,18 @@
 | 2026-11-03 | El precio en pesos se calcula con la cotización guardada en la instantánea, y se muestra como "aproximado" | Los planes están dolarizados; la cotización cambia todos los días |
 | 2026-11-03 | El formulario no tiene backend: arma el mensaje y abre WhatsApp | No guardar datos personales; menos superficie de ataque |
 | 2026-11-03 | Sin cursivas en toda la interfaz | Decisión de marca posterior al TP 3 |
+| 2026-11-03 | Proyecto Angular 21.2 generado con `ng new` (standalone, CSS, sin SSR, zoneless, runner Vitest); prefijo de componentes `wl` en `angular.json` | T0 de 001 |
+| 2026-11-03 | `vitest` fijado en `~4.0.8` (no `^4.0.8`) | Con vitest 4.1 `npm install` (npm 10.9) se rompe con `Cannot read properties of null (reading 'edgesOut')` por sus peers opcionales |
+| 2026-11-03 | Inter se carga desde Google Fonts en `index.html` (400, 600, 800); la pila tipográfica vive en `--font-base` de `tokens.css` | Sin dependencias nuevas; la fuente sale de los tokens |
+| 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
 
 - Selectores con prefijo `wl-`; archivos en kebab-case.
 - Textos en español rioplatense ("Probá", "Escribinos"), no neutro.
 - Los precios en pesos se formatean con `toLocaleString('es-AR')`: punto para miles.
+- Los tests que renderizan `App` necesitan `provideRouter([])` porque el encabezado usa `routerLink`.
+- Las imágenes de `public/` se referencian sin `/public`: `marca/logo-willalogic.png`.
 
 ## Errores ya resueltos
 

@@ -2,7 +2,7 @@
 
 > Fase 4 · Cada tarea dura menos de 30 minutos. Una tarea = una conversación = un commit.
 
-- [ ] **T0 · Crear el proyecto Angular 21** en la raíz del repo (standalone, CSS, sin SSR), con TypeScript estricto. Copiar los tokens de `docs/IDENTIDAD-MARCA.md` a `src/styles/tokens.css` e importarlos en `styles.css`. Cargar Inter. Encabezado con el logo horizontal y pie con «© 2026 WillaLogic · Tinogasta, Catamarca».
+- [x] **T0 · Crear el proyecto Angular 21** en la raíz del repo (standalone, CSS, sin SSR), con TypeScript estricto. Copiar los tokens de `docs/IDENTIDAD-MARCA.md` a `src/styles/tokens.css` e importarlos en `styles.css`. Cargar Inter. Encabezado con el logo horizontal y pie con «© 2026 WillaLogic · Tinogasta, Catamarca».
   *Listo cuando:* `npm test` y `npm run build` pasan; la página de inicio se ve con fondo Noche Profunda y el logo.
   *Commit:* `agrega(sitio): proyecto base con tokens de marca`
 
