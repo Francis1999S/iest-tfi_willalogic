@@ -42,6 +42,9 @@
 | 2026-11-03 | `/consulta`: errores visibles solo con el campo `touched` (al salir o al enviar); al enviar con errores se enfoca el primer campo inválido; el contador del mensaje va en `aria-describedby`; `abrirWhatsApp()` es público para espiarlo en tests | RF-003-05, C6 de 003 |
 | 2026-11-03 | Navegación: Apps · Planes · Quiero mi web, con `flex-wrap` para 360 px | Acceso a las tres páginas |
 | 2026-11-03 | Producción en `willalogic.com.ar/TFI/`: `baseHref: "/TFI/"` solo en la configuración `production` de `angular.json` (`npm start` sigue en `/`) | Pedido del autor |
+| 2026-11-03 | Inicio `/` con textos tomados de IDENTIDAD-MARCA y 09-SEO; ruta comodín `**` → inicio; canonical, Open Graph, `robots.txt` y `sitemap.xml` apuntan a `https://willalogic.com.ar/TFI/`; `og:image` usa el logo hasta tener la imagen de 1200 × 630 | Sin imágenes en `multimedia/`: la leyenda «Generado con IA» queda pendiente |
+| 2026-11-03 | Lighthouse local (móvil, 003-T5): inicio 86/100/100/100, apps 84/100/100/100, planes 86/100/100/100, consulta 87/100/100/100 (Rend./Acc./BP/SEO) | Principio 6 |
+| 2026-11-03 | Sin `<meta name="theme-color">`: obligaría a escribir un hex fuera de `tokens.css` | Principio 2 |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
@@ -64,4 +67,5 @@
 ## Errores ya resueltos
 
 <!-- Completar a medida que aparezcan. Copiar también a docs/PROMPTS.md -->
+- **Git Bash convierte argumentos que empiezan con `/`** (`--base-href /` → `C:/Program Files/Git/`). Anteponer `MSYS_NO_PATHCONV=1`. Se detectó porque Lighthouse daba NO_FCP.
 - **Windows: no usar `python` en comandos.** Sin Python instalado abre el instalador de la Store y el comando queda colgado. Para editar archivos desde la terminal usar `node -e` o las herramientas de edición.

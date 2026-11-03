@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /TFI/
+
+Sitemap: https://willalogic.com.ar/TFI/sitemap.xml

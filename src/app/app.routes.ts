@@ -1,6 +1,13 @@
 import { Routes } from '@angular/router';
+import { InicioComponent } from './paginas/inicio/inicio.component';
 
 export const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    title: 'WillaLogic — Arquitectura digital para empresas que escalan',
+    component: InicioComponent,
+  },
   {
     path: 'apps',
     title: 'Aplicaciones Willa · WillaLogic',
@@ -21,4 +28,5 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./paginas/consulta/consulta.component').then((m) => m.ConsultaComponent),
   },
+  { path: '**', redirectTo: '' },
 ];

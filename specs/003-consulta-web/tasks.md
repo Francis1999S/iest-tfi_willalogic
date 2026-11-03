@@ -16,7 +16,7 @@
   *Listo cuando:* test que no abre WhatsApp con errores y sí con datos válidos; navegable con Tab.
   *Commit:* `agrega(consulta): página de consulta`
 
-- [ ] **T5 · Inicio y navegación.** Página de inicio (`/`) con hero, accesos a Apps, Planes y Consulta, imágenes con leyenda «Generado con IA», metadatos SEO (`09-SEO.md`), `robots.txt` y `sitemap.xml`.
+- [x] **T5 · Inicio y navegación.** Página de inicio (`/`) con hero, accesos a Apps, Planes y Consulta, imágenes con leyenda «Generado con IA», metadatos SEO (`09-SEO.md`), `robots.txt` y `sitemap.xml`.
   *Listo cuando:* Lighthouse ≥ 80 en las cuatro categorías en local.
   *Commit:* `agrega(sitio): inicio, navegación y SEO`
 
