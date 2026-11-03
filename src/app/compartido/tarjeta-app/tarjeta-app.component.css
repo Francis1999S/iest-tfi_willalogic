@@ -1,0 +1,60 @@
+:host {
+  display: block;
+}
+
+.wl-tarjeta-app {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  height: 100%;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid color-mix(in srgb, var(--gold-brand) 20%, transparent);
+  border-left: 4px solid var(--color-app);
+  border-radius: var(--radius);
+}
+
+.wl-tarjeta-app__icono,
+.wl-tarjeta-app__insignia {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+}
+
+.wl-tarjeta-app__icono {
+  object-fit: cover;
+}
+
+/* El color de la app se oscurece con el fondo para que las siglas blancas mantengan contraste */
+.wl-tarjeta-app__insignia {
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--color-app) 70%, var(--bg-primary));
+  color: var(--text-white);
+  font-weight: 800;
+  font-size: 1.125rem;
+}
+
+.wl-tarjeta-app__texto {
+  min-width: 0;
+}
+
+.wl-tarjeta-app__nombre {
+  margin: 0 0 0.25rem;
+  color: var(--text-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.wl-tarjeta-app__descripcion {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}

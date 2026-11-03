@@ -18,7 +18,7 @@
   *Listo cuando:* test con respuesta simulada → `listo` y 11 apps; con error → `error`.
   *Commit:* `agrega(catalogo): servicio que lee la instantánea de apps`
 
-- [ ] **T4 · Componente tarjeta.** `<wl-tarjeta-app>` con ícono, `alt`, nombre, descripción (máx. 3 líneas), borde con `--color-app` e insignia si el ícono falla.
+- [x] **T4 · Componente tarjeta.** `<wl-tarjeta-app>` con ícono, `alt`, nombre, descripción (máx. 3 líneas), borde con `--color-app` e insignia si el ícono falla.
   *Listo cuando:* test que verifica `alt="Ícono de Willa Stock"`; sin colores a mano en el CSS.
   *Commit:* `agrega(catalogo): tarjeta de aplicación`
 

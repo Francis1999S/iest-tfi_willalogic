@@ -1,0 +1,21 @@
+<article class="wl-tarjeta-app" [style.--color-app]="app().color">
+  @if (iconoFallo()) {
+    <span class="wl-tarjeta-app__insignia" role="img" [attr.aria-label]="textoIcono()">
+      {{ siglas() }}
+    </span>
+  } @else {
+    <img
+      class="wl-tarjeta-app__icono"
+      [src]="app().logo"
+      [alt]="textoIcono()"
+      width="56"
+      height="56"
+      loading="lazy"
+      (error)="iconoFallo.set(true)"
+    />
+  }
+  <div class="wl-tarjeta-app__texto">
+    <h2 class="wl-tarjeta-app__nombre">{{ app().nombre }}</h2>
+    <p class="wl-tarjeta-app__descripcion">{{ app().descripcion }}</p>
+  </div>
+</article>

@@ -19,6 +19,9 @@
 | 2026-11-03 | `siglasApp()` sale del `nombre`, no del `slug`, y no limita la cantidad de letras | Así lo fija el plan; los 11 nombres actuales tienen como máximo 3 palabras ("WCC") |
 | 2026-11-03 | `AppsService` copia solo los 6 campos de C2 y convierte `logo` en URL completa (`base_iconos` + archivo) | La tarjeta recibe la URL lista; los campos internos del JSON no llegan a la vista |
 | 2026-11-03 | `AppsService` carga en el constructor (`providedIn: 'root'`, una sola petición); JSON sin `apps` como lista → `error`; lista vacía → `listo` | Caso límite de la spec: lista vacía es "sin resultados", no error |
+| 2026-11-03 | El nombre de la app en la tarjeta es `<h2>` (la página `/apps` lleva el único `<h1>`) | Encabezados en orden |
+| 2026-11-03 | La insignia de respaldo es `role="img"` con `aria-label="Ícono de …"` y fondo `color-mix(--color-app 70 %, --bg-primary)` con siglas en `--text-white` | Colores claros como `#5fa800` no dan contraste AA con texto blanco si se usan puros |
+| 2026-11-03 | Bordes "dorado al 20 %" con `color-mix(in srgb, var(--gold-brand) 20%, transparent)` | El ejemplo de 06-DISENO-UI usa `rgba(...)` a mano, que viola el principio 2 |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
@@ -29,6 +32,7 @@
 - Los tests que renderizan `App` necesitan `provideRouter([])` porque el encabezado usa `routerLink`.
 - Las imágenes de `public/` se referencian sin `/public`: `marca/logo-willalogic.png`.
 - Tests de servicios con HTTP: `provideHttpClient()` + `provideHttpClientTesting()` y `HttpTestingController.verify()` en `afterEach`.
+- Componentes: archivos con sufijo `.component.*` y clase `…Component` (07-CONVENCIONES), aunque Angular 21 genere sin sufijo. Inputs con `input.required<…>()` y en tests `fixture.componentRef.setInput(…)`.
 - Los `.spec.ts` pueden tener colores como dato de prueba (`'#244A85'`); el chequeo de colores a mano aplica a estilos y plantillas.
 
 ## Errores ya resueltos
