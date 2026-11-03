@@ -14,7 +14,7 @@
   *Listo cuando:* "Willa Stock" → "WS", "Willa Community Center" → "WCC", texto vacío → "W".
   *Commit:* `agrega(catalogo): siglas para íconos que no cargan`
 
-- [ ] **T3 · Servicio de apps.** `AppsService` lee `/data/apps.json` y expone `apps` y `estado`.
+- [x] **T3 · Servicio de apps.** `AppsService` lee `/data/apps.json` y expone `apps` y `estado`.
   *Listo cuando:* test con respuesta simulada → `listo` y 11 apps; con error → `error`.
   *Commit:* `agrega(catalogo): servicio que lee la instantánea de apps`
 

@@ -17,6 +17,8 @@
 | 2026-11-03 | `AppWilla` tipa solo los 6 campos de C2 (uuid, nombre, descripcion, color, logo, version); los extras de `apps.json` se ignoran | Independiente de la decisión pendiente C9 |
 | 2026-11-03 | `normalizar()` quita diacríticos con NFD, así que también "ñ" → "n" | Aceptado: buscar "pena" también encuentra "peña"; con 11 apps no molesta |
 | 2026-11-03 | `siglasApp()` sale del `nombre`, no del `slug`, y no limita la cantidad de letras | Así lo fija el plan; los 11 nombres actuales tienen como máximo 3 palabras ("WCC") |
+| 2026-11-03 | `AppsService` copia solo los 6 campos de C2 y convierte `logo` en URL completa (`base_iconos` + archivo) | La tarjeta recibe la URL lista; los campos internos del JSON no llegan a la vista |
+| 2026-11-03 | `AppsService` carga en el constructor (`providedIn: 'root'`, una sola petición); JSON sin `apps` como lista → `error`; lista vacía → `listo` | Caso límite de la spec: lista vacía es "sin resultados", no error |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
@@ -26,6 +28,8 @@
 - Los precios en pesos se formatean con `toLocaleString('es-AR')`: punto para miles.
 - Los tests que renderizan `App` necesitan `provideRouter([])` porque el encabezado usa `routerLink`.
 - Las imágenes de `public/` se referencian sin `/public`: `marca/logo-willalogic.png`.
+- Tests de servicios con HTTP: `provideHttpClient()` + `provideHttpClientTesting()` y `HttpTestingController.verify()` en `afterEach`.
+- Los `.spec.ts` pueden tener colores como dato de prueba (`'#244A85'`); el chequeo de colores a mano aplica a estilos y plantillas.
 
 ## Errores ya resueltos
 

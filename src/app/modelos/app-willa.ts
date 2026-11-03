@@ -6,7 +6,8 @@ export interface AppWilla {
   descripcion: string;
   /** Color propio de la app: es un dato, se aplica como `--color-app`. */
   color: string;
-  /** Nombre del archivo del ícono, relativo a `base_iconos`. */
+  /** En el JSON es el nombre del archivo; `AppsService` lo convierte en URL completa
+   *  anteponiendo `base_iconos`. */
   logo: string;
   version: string;
 }
