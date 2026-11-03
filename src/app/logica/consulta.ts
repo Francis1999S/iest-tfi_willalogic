@@ -46,6 +46,13 @@ export function armarMensaje(datos: DatosConsulta): string {
   return partes.filter(Boolean).join(' ');
 }
 
+/** Valor de `?plan=` validado contra la lista blanca `INTERESES` (clarificación C3 de 003).
+ *  Cualquier otro texto se descarta y devuelve vacío. */
+export function interesDesdeUrl(valor: string | null | undefined): string {
+  const limpio = limpiar(valor ?? '');
+  return INTERESES.includes(limpio) ? limpio : '';
+}
+
 /** Enlace de WhatsApp con el mensaje codificado (`&`, `#`, `?` y saltos de línea incluidos). */
 export function enlaceWhatsApp(mensaje: string): string {
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensaje)}`;

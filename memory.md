@@ -37,6 +37,7 @@
 | 2026-11-03 | 003-D2 aplicada: el paréntesis (rubro, localidad) se arma solo con los datos presentes, sin comas sueltas | RF-003-08 dice "omitiendo"; la propuesta de la clarificación lo cumple en todos los casos |
 | 2026-11-03 | 003-D1 con opción (a): `INTERESES` repite los 3 nombres de plan con un comentario que obliga a mantenerlos iguales a `planes.json` | Opción conservadora; la (b) cambia la arquitectura y queda a criterio del autor |
 | 2026-11-03 | `limpiar()` colapsa espacios repetidos y recorta cada línea, pero conserva los saltos de línea del mensaje | RF-003-09 |
+| 2026-11-03 | `interesDesdeUrl()`: coincidencia exacta (distingue mayúsculas) tras recortar espacios; cualquier otro valor → vacío | Lista blanca estricta (C3 de 003) |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar

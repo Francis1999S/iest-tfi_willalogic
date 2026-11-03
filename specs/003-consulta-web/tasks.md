@@ -4,7 +4,7 @@
   *Listo cuando:* tests de mensaje completo, sin opcionales y con `&`/`#` pasan.
   *Commit:* `agrega(consulta): armado del mensaje de WhatsApp`
 
-- [ ] **T2 · Interés desde la URL (test primero).** `interesDesdeUrl` con lista blanca.
+- [x] **T2 · Interés desde la URL (test primero).** `interesDesdeUrl` con lista blanca.
   *Listo cuando:* «Plan Escala» se acepta; `<script>` y valores desconocidos se ignoran.
   *Commit:* `agrega(consulta): plan elegido desde la página de planes`
 

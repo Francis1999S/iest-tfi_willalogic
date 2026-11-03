@@ -1,4 +1,11 @@
-import { DatosConsulta, INTERESES, armarMensaje, enlaceWhatsApp, limpiar } from './consulta';
+import {
+  DatosConsulta,
+  INTERESES,
+  armarMensaje,
+  enlaceWhatsApp,
+  interesDesdeUrl,
+  limpiar,
+} from './consulta';
 
 const DATOS: DatosConsulta = {
   nombre: 'Ana',
@@ -74,5 +81,27 @@ describe('enlaceWhatsApp', () => {
   it('conserva los emojis', () => {
     const enlace = enlaceWhatsApp('Gracias 🙌');
     expect(new URL(enlace).searchParams.get('text')).toBe('Gracias 🙌');
+  });
+});
+
+describe('interesDesdeUrl', () => {
+  it('acepta un plan que está en la lista', () => {
+    expect(interesDesdeUrl('Plan Escala')).toBe('Plan Escala');
+  });
+
+  it('ignora espacios sobrantes alrededor del valor', () => {
+    expect(interesDesdeUrl('  Plan E-Gov ')).toBe('Plan E-Gov');
+  });
+
+  it('ignora código y valores desconocidos', () => {
+    expect(interesDesdeUrl('<script>alert(1)</script>')).toBe('');
+    expect(interesDesdeUrl('Plan Inexistente')).toBe('');
+    expect(interesDesdeUrl('plan escala')).toBe('');
+  });
+
+  it('sin parámetro devuelve vacío', () => {
+    expect(interesDesdeUrl(null)).toBe('');
+    expect(interesDesdeUrl(undefined)).toBe('');
+    expect(interesDesdeUrl('')).toBe('');
   });
 });
