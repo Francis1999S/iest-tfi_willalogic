@@ -25,6 +25,7 @@
 | 2026-11-03 | Ruta `/apps` con carga diferida (`loadComponent`) y título «Aplicaciones Willa · WillaLogic» | 09-SEO no define título para `/apps`; a confirmar por el autor |
 | 2026-11-03 | Lista vacía con el buscador vacío muestra «Todavía no hay apps para mostrar.»; el mensaje de RF-001-05 se usa solo si hay texto buscado | Evita mostrar `con ""` en el caso límite de la lista vacía |
 | 2026-11-03 | Encabezado con navegación «Apps» (`routerLinkActive` + `aria-current="page"`) | Sin enlace, `/apps` solo se alcanzaba escribiendo la URL |
+| 2026-11-03 | Verificación de 001: 9 ✅, 0 ❌, 1 🖐 (RF-001-09, grilla responsiva). Pendientes: prueba a 360/600/1024 px, Tab + foco, Lighthouse, C9/C10 y `docs/PROMPTS.md` | Ver `specs/001-catalogo-apps/verificacion.md` |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
@@ -39,6 +40,7 @@
 - Tests de páginas: reemplazar el servicio con `{ provide: AppsService, useValue: { apps, estado } }` usando señales, sin HTTP.
 - Leer el valor de un `<input>` con referencia de plantilla (`#campo` → `campo.value`), nunca con `$any($event.target)`.
 - La región `aria-live` tiene que existir siempre en el DOM; solo cambia su contenido, si no el lector de pantalla no anuncia.
+- jsdom no aplica media queries: la grilla responsiva (y cualquier corte por ancho) queda como prueba manual en la verificación.
 - Los `.spec.ts` pueden tener colores como dato de prueba (`'#244A85'`); el chequeo de colores a mano aplica a estilos y plantillas.
 
 ## Errores ya resueltos

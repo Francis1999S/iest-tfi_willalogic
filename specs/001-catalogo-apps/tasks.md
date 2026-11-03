@@ -26,6 +26,6 @@
   *Listo cuando:* test que muestra 11 tarjetas y el mensaje de sin resultados; se ve bien a 360 px.
   *Commit:* `agrega(catalogo): página de catálogo con buscador`
 
-- [ ] **T6 · Verificación.** Correr `/verificar 001-catalogo-apps`.
+- [x] **T6 · Verificación.** Correr `/verificar 001-catalogo-apps`.
   *Listo cuando:* existe `verificacion.md` sin requisitos ❌.
   *Commit:* `docs(001): verificación del catálogo`
