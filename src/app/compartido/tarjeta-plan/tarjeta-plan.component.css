@@ -1,0 +1,146 @@
+:host {
+  display: block;
+}
+
+.wl-tarjeta-plan {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid color-mix(in srgb, var(--gold-brand) 20%, transparent);
+  border-radius: var(--radius);
+}
+
+.wl-tarjeta-plan--recomendado {
+  border: 2px solid var(--gold-brand);
+}
+
+.wl-tarjeta-plan__etiqueta {
+  align-self: flex-start;
+  margin: 0 0 0.75rem;
+  padding: 0.125rem 0.625rem;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-sm);
+  color: var(--gold);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.wl-tarjeta-plan__nombre {
+  margin: 0;
+  color: var(--text-white);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.wl-tarjeta-plan__tipo {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.wl-tarjeta-plan__precio {
+  margin: 1rem 0 0;
+  color: var(--gold);
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.wl-tarjeta-plan__pesos {
+  margin: 0;
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+.wl-tarjeta-plan__descripcion {
+  margin: 1rem 0 0;
+  color: var(--text-muted);
+  white-space: pre-line;
+}
+
+.wl-tarjeta-plan__limites {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+}
+
+.wl-tarjeta-plan__limites div {
+  min-width: 0;
+  padding: 0.5rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.wl-tarjeta-plan__limites dt {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.wl-tarjeta-plan__limites dd {
+  margin: 0;
+  color: var(--text-white);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.wl-tarjeta-plan__subtitulo {
+  margin: 1.25rem 0 0.5rem;
+  color: var(--text-white);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.wl-tarjeta-plan__apps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wl-tarjeta-plan__apps li {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  --tamano-icono: 32px;
+}
+
+.wl-tarjeta-plan__app-nombre {
+  color: var(--text-white);
+}
+
+/* Secundario por defecto; el plan recomendado lleva el único botón primario */
+.wl-tarjeta-plan__boton {
+  display: block;
+  margin-top: auto;
+  padding: 10px;
+  border: 2px solid var(--gold-brand);
+  border-radius: 16px;
+  color: var(--text-white);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.wl-tarjeta-plan__apps + .wl-tarjeta-plan__boton,
+.wl-tarjeta-plan__limites + .wl-tarjeta-plan__boton {
+  margin-top: 1.5rem;
+}
+
+.wl-tarjeta-plan__boton--primario {
+  background: linear-gradient(135deg, var(--gold-brand), var(--bronze));
+  border-color: transparent;
+  color: var(--bg-primary);
+}
+
+.wl-tarjeta-plan__boton:hover {
+  border-color: var(--gold);
+}
+
+.wl-tarjeta-plan__boton--primario:hover {
+  box-shadow: 0 0 12px color-mix(in srgb, var(--gold) 40%, transparent);
+}

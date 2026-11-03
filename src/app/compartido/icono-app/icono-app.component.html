@@ -1,0 +1,19 @@
+@if (fallo()) {
+  @if (decorativo()) {
+    <span class="wl-icono-app wl-icono-app--insignia" aria-hidden="true">{{ siglas() }}</span>
+  } @else {
+    <span class="wl-icono-app wl-icono-app--insignia" role="img" [attr.aria-label]="texto()">
+      {{ siglas() }}
+    </span>
+  }
+} @else {
+  <img
+    class="wl-icono-app"
+    [src]="app().logo"
+    [alt]="decorativo() ? '' : texto()"
+    width="56"
+    height="56"
+    loading="lazy"
+    (error)="fallo.set(true)"
+  />
+}

@@ -29,6 +29,9 @@
 | 2026-11-03 | 002: `precioEnPesos()` devuelve `null` con cotización ausente, 0 o negativa; `formatoUsd` muestra decimales con coma solo si existen ("USD 13,5") | Caso límite de 002: sin cotización solo se muestra USD |
 | 2026-11-03 | 002: `appsDePlan()` respeta el orden de uuids del plan (no el del catálogo) y omite los que faltan | RF-002-07 |
 | 2026-11-03 | 002: `PlanesService` convierte `precio_usd` a número, marca `recomendado` con la constante `PLAN_RECOMENDADO = 'Plan Escala'` y descarta campos no mostrados (`chatbot`) | C2, C3 y C5 de 002; el JSON no trae "recomendado" |
+| 2026-11-03 | `<wl-icono-app>` (compartido) encapsula ícono + insignia de siglas; lo usan la tarjeta de app y la de plan. Con `[decorativo]="true"` el ícono lleva `alt=""` porque el nombre ya está escrito al lado. Tamaño con `--tamano-icono` | El plan de 002 pide reutilizar la insignia de 001 |
+| 2026-11-03 | En `/planes` el único botón primario es el del plan recomendado; los otros «Quiero este plan» son secundarios | 06-DISENO-UI: un solo botón primario por pantalla |
+| 2026-11-03 | Texto negro del botón primario = `var(--bg-primary)` | No hay token "negro"; Noche Profunda es casi negro |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar

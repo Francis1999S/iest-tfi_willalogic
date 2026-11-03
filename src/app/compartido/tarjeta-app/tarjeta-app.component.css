@@ -14,28 +14,6 @@
   border-radius: var(--radius);
 }
 
-.wl-tarjeta-app__icono,
-.wl-tarjeta-app__insignia {
-  flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-sm);
-}
-
-.wl-tarjeta-app__icono {
-  object-fit: cover;
-}
-
-/* El color de la app se oscurece con el fondo para que las siglas blancas mantengan contraste */
-.wl-tarjeta-app__insignia {
-  display: grid;
-  place-items: center;
-  background: color-mix(in srgb, var(--color-app) 70%, var(--bg-primary));
-  color: var(--text-white);
-  font-weight: 800;
-  font-size: 1.125rem;
-}
-
 .wl-tarjeta-app__texto {
   min-width: 0;
 }

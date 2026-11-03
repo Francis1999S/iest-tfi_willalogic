@@ -1,0 +1,48 @@
+<article class="wl-tarjeta-plan" [class.wl-tarjeta-plan--recomendado]="plan().recomendado">
+  @if (plan().recomendado) {
+    <p class="wl-tarjeta-plan__etiqueta">Recomendado</p>
+  }
+  <h2 class="wl-tarjeta-plan__nombre">{{ plan().nombre }}</h2>
+  <p class="wl-tarjeta-plan__tipo">{{ plan().tipo }}</p>
+
+  <p class="wl-tarjeta-plan__precio">{{ usd() }} / mes</p>
+  @if (pesos(); as pesos) {
+    <p class="wl-tarjeta-plan__pesos">≈ {{ pesos }} / mes</p>
+  }
+
+  <p class="wl-tarjeta-plan__descripcion">{{ plan().descripcion }}</p>
+
+  <dl class="wl-tarjeta-plan__limites">
+    <div>
+      <dt>Sucursales</dt>
+      <dd>{{ plan().maxSucursales }}</dd>
+    </div>
+    <div>
+      <dt>Usuarios</dt>
+      <dd>{{ plan().maxUsuarios }}</dd>
+    </div>
+    <div>
+      <dt>Soporte</dt>
+      <dd>{{ plan().soporte }}</dd>
+    </div>
+  </dl>
+
+  @if (apps().length > 0) {
+    <h3 class="wl-tarjeta-plan__subtitulo">Apps incluidas</h3>
+    <ul class="wl-tarjeta-plan__apps">
+      @for (app of apps(); track app.uuid) {
+        <li>
+          <wl-icono-app [app]="app" [decorativo]="true" />
+          <span class="wl-tarjeta-plan__app-nombre">{{ app.nombre }}</span>
+        </li>
+      }
+    </ul>
+  }
+
+  <a
+    class="wl-tarjeta-plan__boton"
+    [class.wl-tarjeta-plan__boton--primario]="plan().recomendado"
+    routerLink="/consulta"
+    [queryParams]="{ plan: plan().nombre }"
+  >Quiero este plan</a>
+</article>

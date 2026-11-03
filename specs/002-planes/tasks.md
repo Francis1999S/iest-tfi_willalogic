@@ -12,7 +12,7 @@
   *Listo cuando:* tests de conversión y de error en verde.
   *Commit:* `agrega(planes): servicio que lee la instantánea de planes`
 
-- [ ] **T4 · Tarjeta de plan.** Nombre, «Recomendado» en Plan Escala, USD, ≈ pesos, límites, íconos de apps, botón «Quiero este plan».
+- [x] **T4 · Tarjeta de plan.** Nombre, «Recomendado» en Plan Escala, USD, ≈ pesos, límites, íconos de apps, botón «Quiero este plan».
   *Listo cuando:* test que verifica «USD 25 / mes» y «≈ $39.125 / mes» en Plan Escala; no muestra `chatbot`.
   *Commit:* `agrega(planes): tarjeta de plan`
 

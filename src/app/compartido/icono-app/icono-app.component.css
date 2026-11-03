@@ -1,0 +1,25 @@
+/* El tamaño se ajusta desde afuera con --tamano-icono (56 px por defecto) */
+:host {
+  display: block;
+  flex-shrink: 0;
+  width: var(--tamano-icono, 56px);
+  height: var(--tamano-icono, 56px);
+}
+
+.wl-icono-app {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+/* El color de la app se oscurece con el fondo para que las siglas blancas mantengan contraste */
+.wl-icono-app--insignia {
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--color-app) 70%, var(--bg-primary));
+  color: var(--text-white);
+  font-weight: 800;
+  font-size: calc(var(--tamano-icono, 56px) * 0.32);
+}
