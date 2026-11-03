@@ -6,7 +6,7 @@
   *Listo cuando:* `npm test` y `npm run build` pasan; la página de inicio se ve con fondo Noche Profunda y el logo.
   *Commit:* `agrega(sitio): proyecto base con tokens de marca`
 
-- [ ] **T1 · Modelo y función de filtrado (test primero).** `AppWilla`, `normalizar()` y `filtrarApps()`.
+- [x] **T1 · Modelo y función de filtrado (test primero).** `AppWilla`, `normalizar()` y `filtrarApps()`.
   *Listo cuando:* los tests de vacío, mayúsculas, tildes, espacios y sin resultados pasan.
   *Commit:* `agrega(catalogo): filtro de apps sin tildes ni mayúsculas`
 

@@ -14,6 +14,8 @@
 | 2026-11-03 | Proyecto Angular 21.2 generado con `ng new` (standalone, CSS, sin SSR, zoneless, runner Vitest); prefijo de componentes `wl` en `angular.json` | T0 de 001 |
 | 2026-11-03 | `vitest` fijado en `~4.0.8` (no `^4.0.8`) | Con vitest 4.1 `npm install` (npm 10.9) se rompe con `Cannot read properties of null (reading 'edgesOut')` por sus peers opcionales |
 | 2026-11-03 | Inter se carga desde Google Fonts en `index.html` (400, 600, 800); la pila tipográfica vive en `--font-base` de `tokens.css` | Sin dependencias nuevas; la fuente sale de los tokens |
+| 2026-11-03 | `AppWilla` tipa solo los 6 campos de C2 (uuid, nombre, descripcion, color, logo, version); los extras de `apps.json` se ignoran | Independiente de la decisión pendiente C9 |
+| 2026-11-03 | `normalizar()` quita diacríticos con NFD, así que también "ñ" → "n" | Aceptado: buscar "pena" también encuentra "peña"; con 11 apps no molesta |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
