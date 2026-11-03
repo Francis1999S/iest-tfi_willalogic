@@ -1,6 +1,6 @@
 # Spec 003 · Consulta «Quiero mi web»
 
-> Fase 1 · Cubre **RF24** · Estado: aprobada tras clarificación (2026-11-03)
+> Fase 1 · Cubre **RF24** · Estado: aprobada tras clarificación (2026-11-03) · Cambio: RF-003-11 y 12 (2026-11-03)
 
 ## Contexto
 
@@ -26,6 +26,10 @@ Los comerciantes contactan a WillaLogic por WhatsApp. El formulario los ayuda a 
 | RF-003-08 | El sistema deberá armar el mensaje con el formato: «Hola WillaLogic, soy [nombre] de [negocio] ([rubro], [localidad]). Me interesa: [interés]. [mensaje]», omitiendo rubro y localidad si están vacíos. |
 | RF-003-09 | El sistema deberá quitar espacios sobrantes de todos los campos antes de validar y de armar el mensaje. |
 | RF-003-10 | El sistema no deberá guardar ni enviar los datos a ningún servidor, y deberá informarlo con el texto «No guardamos tus datos: la consulta se envía directamente desde tu WhatsApp.». |
+| RF-003-11 | El sistema deberá mostrar en la página de inicio el video promocional de WillaLogic (`https://youtu.be/SCc0Tm5Ud_o`) con un título accesible, un enlace para verlo en YouTube y la leyenda «Generado con IA: clips de VidoGrid (Veo 3.1) y voz de ElevenLabs, editado por el autor.». |
+| RF-003-12 | Si el reproductor del video no carga, entonces el sistema deberá seguir ofreciendo el enlace al video en YouTube. |
+
+> **Cambio (2026-11-03):** se agregan RF-003-11 y RF-003-12 a pedido de la cátedra: el video promocional tiene que estar en el sitio. El inicio se construyó en la T5 de esta spec, por eso el requisito vive acá. La leyenda cumple el principio 8 de la constitución (toda pieza generada con IA se identifica en el sitio). El reproductor usa `youtube-nocookie.com` con la URL fija en la plantilla, sin `bypassSecurityTrust*` (principio 5), y carga diferida para no afectar el rendimiento.
 
 ## Casos límite
 
