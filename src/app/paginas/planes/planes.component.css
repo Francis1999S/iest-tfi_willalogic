@@ -1,0 +1,37 @@
+.wl-planes__titulo {
+  margin: 0 0 1rem;
+  color: var(--text-white);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.wl-destacado {
+  color: var(--gold);
+}
+
+.wl-planes__aviso,
+.wl-planes__estado {
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+}
+
+.wl-planes__estado--error {
+  color: var(--color-error);
+}
+
+/* Mobile first: tarjetas apiladas; 3 columnas en escritorio */
+.wl-planes__grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 1024px) {
+  .wl-planes__grilla {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

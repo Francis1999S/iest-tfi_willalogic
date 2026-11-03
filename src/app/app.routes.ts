@@ -9,4 +9,10 @@ export const routes: Routes = [
         (m) => m.CatalogoAppsComponent,
       ),
   },
+  {
+    path: 'planes',
+    title: 'Planes y precios · WillaLogic',
+    loadComponent: () =>
+      import('./paginas/planes/planes.component').then((m) => m.PlanesComponent),
+  },
 ];

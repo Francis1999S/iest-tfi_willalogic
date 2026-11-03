@@ -1,0 +1,28 @@
+<section class="wl-planes">
+  <h1 class="wl-planes__titulo">Planes y <span class="wl-destacado">precios</span></h1>
+
+  @switch (estado()) {
+    @case ('cargando') {
+      <p class="wl-planes__estado" role="status">Cargando planes…</p>
+    }
+    @case ('error') {
+      <p class="wl-planes__estado wl-planes__estado--error" role="alert">
+        No pudimos cargar los planes. Recargá la página.
+      </p>
+    }
+    @case ('listo') {
+      @if (cotizacion()) {
+        <p class="wl-planes__aviso">
+          Cotización del {{ fecha() }}. El precio final se calcula el día del pago.
+        </p>
+      }
+      <ul class="wl-planes__grilla">
+        @for (plan of planes(); track plan.uuid) {
+          <li>
+            <wl-tarjeta-plan [plan]="plan" [catalogo]="catalogo()" [cotizacion]="cotizacion()" />
+          </li>
+        }
+      </ul>
+    }
+  }
+</section>

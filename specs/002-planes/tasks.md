@@ -16,7 +16,7 @@
   *Listo cuando:* test que verifica «USD 25 / mes» y «≈ $39.125 / mes» en Plan Escala; no muestra `chatbot`.
   *Commit:* `agrega(planes): tarjeta de plan`
 
-- [ ] **T5 · Página `/planes`.** Título, aviso de cotización con fecha, grilla 1 / 3 columnas, estado de error.
+- [x] **T5 · Página `/planes`.** Título, aviso de cotización con fecha, grilla 1 / 3 columnas, estado de error.
   *Listo cuando:* test que muestra 3 planes; se ve bien a 360 px.
   *Commit:* `agrega(planes): página de planes`
 

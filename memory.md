@@ -32,6 +32,7 @@
 | 2026-11-03 | `<wl-icono-app>` (compartido) encapsula ícono + insignia de siglas; lo usan la tarjeta de app y la de plan. Con `[decorativo]="true"` el ícono lleva `alt=""` porque el nombre ya está escrito al lado. Tamaño con `--tamano-icono` | El plan de 002 pide reutilizar la insignia de 001 |
 | 2026-11-03 | En `/planes` el único botón primario es el del plan recomendado; los otros «Quiero este plan» son secundarios | 06-DISENO-UI: un solo botón primario por pantalla |
 | 2026-11-03 | Texto negro del botón primario = `var(--bg-primary)` | No hay token "negro"; Noche Profunda es casi negro |
+| 2026-11-03 | `/planes`: fecha de cotización en `DD/MM/AAAA` con `formatoFecha()` (sin `Date`, para no correr el día por zona horaria); sin cotización se oculta el aviso; grilla 1 → 3 columnas desde 1024 px; título «Planes y precios · WillaLogic» | RF-002-04 no fija el formato de fecha; 09-SEO no define título |
 | 2026-11-03 | El encabezado usa `marca/logo-willalogic.png`, que es la versión **vertical** | No hay archivo del logo horizontal; reemplazarlo cuando exista (no componer el logotipo con otra fuente) |
 
 ## Convenciones que la IA tiende a olvidar
