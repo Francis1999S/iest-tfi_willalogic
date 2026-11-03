@@ -1,8 +1,8 @@
 # Verificación · 003-consulta-web
 
-Fecha: 2026-11-03 · Tests: 103/103 en verde (16 archivos) · Build: OK, sin errores ni advertencias
+Fecha: 2026-11-03 (actualizada con el cambio RF-003-11 y 12) · Tests: 106/106 en verde (16 archivos) · Build: OK, sin errores ni advertencias
 
-> Fase 6 · Generada con `/verificar 003-consulta-web` (skill `verificar-criterios`). Último commit verificado: `db1952c`.
+> Fase 6 · Generada con `/verificar 003-consulta-web` (skill `verificar-criterios`). Último commit verificado: `d6740c7`.
 
 ## Requisitos
 
@@ -18,6 +18,8 @@ Fecha: 2026-11-03 · Tests: 103/103 en verde (16 archivos) · Build: OK, sin err
 | RF-003-08 | ✅ Cumple | `consulta.spec.ts` › «arma el mensaje completo», «omite el paréntesis si no hay rubro ni localidad», «con solo rubro o solo localidad no deja comas sueltas» | — |
 | RF-003-09 | ✅ Cumple | `consulta.spec.ts` › `limpiar` (2 tests) y «limpia los espacios de todos los campos»; `consulta-validacion.spec.ts` › «cuenta los largos después de quitar espacios sobrantes» | — |
 | RF-003-10 | ✅ Cumple | `consulta.component.spec.ts` › «avisa que no guarda los datos»; la página no usa `HttpClient`, `fetch`, `localStorage` ni cookies (búsqueda sin resultados fuera de `servicios/`) | — |
+| RF-003-11 | ✅ Cumple | `inicio.component.spec.ts` › «muestra el video promocional sin cookies, con título y carga diferida» (`src` de `youtube-nocookie.com/embed/SCc0Tm5Ud_o`, `title`, `loading="lazy"`), «identifica el video como generado con IA» (leyenda exacta en `figcaption`) y «ofrece el enlace a YouTube fuera del reproductor» | — |
+| RF-003-12 | ✅ Cumple | `inicio.component.spec.ts` › «ofrece el enlace a YouTube fuera del reproductor»: el enlace es un elemento propio de la página, no depende del iframe. Prueba manual opcional: bloquear `youtube-nocookie.com` en las herramientas de desarrollo y comprobar que el enlace sigue visible | — |
 
 ## Casos límite de la spec
 
@@ -43,13 +45,13 @@ Fecha: 2026-11-03 · Tests: 103/103 en verde (16 archivos) · Build: OK, sin err
 - [x] **3. Capas separadas.** `consulta.ts` y `consulta-validacion.ts` son funciones puras con tests; el componente las envuelve como `ValidatorFn`.
 - [x] **4. Tests primero.** Cada tarea empezó por su test en rojo.
 - [x] **5. Seguridad y datos.** El mensaje pasa por `encodeURIComponent` (`consulta.ts:58`); `?plan=` se valida con lista blanca; sin `innerHTML`; no se piden teléfono ni email (C1); no se guarda nada.
-- [x] **6. Accesible y mobile first.** Lighthouse local (perfil móvil) en las cuatro páginas: Rendimiento 84–87, Accesibilidad 100, Buenas prácticas 100, SEO 100. Etiquetas visibles, `aria-invalid`, `aria-describedby`, foco visible. Falta la prueba manual con teclado.
+- [x] **6. Accesible y mobile first.** Lighthouse local (perfil móvil) en las cuatro páginas: Rendimiento 84–87, Accesibilidad 100, Buenas prácticas 100, SEO 100. Con el video en el inicio: 95 / 100 / 96 / 100 (el 96 es un aviso del inspector de Chrome por el iframe de YouTube). Etiquetas visibles, `aria-invalid`, `aria-describedby`, foco visible. Falta la prueba manual con teclado.
 - [x] **7. Español rioplatense.** «Escribí tu nombre», «Contanos qué necesitás», «Elegí qué te interesa».
-- [ ] **8. Uso responsable de la IA.** `docs/PROMPTS.md` pendiente de actualizar. No hay imágenes generadas con IA en el sitio todavía, así que la leyenda «Generado con IA» de 003-T5 queda pendiente hasta que se agreguen.
+- [x] **8. Uso responsable de la IA.** `docs/PROMPTS.md` actualizado. La única pieza generada con IA del sitio es el video promocional, que lleva la leyenda «Generado con IA» (RF-003-11). Las imágenes de 003-T5 no se generaron; cuando se agreguen tienen que llevar la misma leyenda.
 
 ## Criterios de finalización de la spec
 
-- [x] Los 10 requisitos ✅ o 🖐 verificada → 10 ✅.
+- [x] Los 12 requisitos ✅ o 🖐 verificada → 12 ✅.
 - [x] Tests de validación y de armado del mensaje (incluido `&` y `#`) en verde.
 - [ ] Probado a mano en celular: abre WhatsApp con el texto correcto → 🖐 pendiente (paso 1).
 - [ ] Navegable entero con teclado → 🖐 pendiente (paso 3).
@@ -57,6 +59,8 @@ Fecha: 2026-11-03 · Tests: 103/103 en verde (16 archivos) · Build: OK, sin err
 ## Tareas
 
 T1 a T5 en `[x]`, con sus commits (`bd80465`, `b0790ad`, `8431d33`, `99537a5`, `db1952c`). Además, `bce84a6` (base href `/TFI/`, pedido del autor). T6 se cierra con este archivo.
+
+Cambio (2026-11-03): spec en `9419ae4`; T7 (video promocional) en `d6740c7`; T8 es esta actualización.
 
 ## Observaciones (no son fallas de un RF)
 
@@ -67,4 +71,4 @@ T1 a T5 en `[x]`, con sus commits (`bd80465`, `b0790ad`, `8431d33`, `99537a5`, `
 
 ## Resumen
 
-Cumplen: 10 · No cumplen: 0 · Pendientes manuales: 0 de requisitos (4 pruebas manuales de criterios: celular, escritorio, teclado y flujo desde planes)
+Cumplen: 12 · No cumplen: 0 · Pendientes manuales: 0 de requisitos (4 pruebas manuales de criterios: celular, escritorio, teclado y flujo desde planes)

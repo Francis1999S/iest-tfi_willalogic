@@ -29,6 +29,6 @@
   *Listo cuando:* test que verifica el `src` del reproductor, su `title`, la carga diferida, la leyenda exacta de RF-003-11 y el enlace a `https://youtu.be/SCc0Tm5Ud_o`; `npm test` y `npm run build` en verde; Lighthouse local sigue ≥ 80 en las cuatro categorías.
   *Commit:* `agrega(sitio): video promocional en el inicio`
 
-- [ ] **T8 · Verificación del cambio.** Agregar RF-003-11 y RF-003-12 a `verificacion.md`.
+- [x] **T8 · Verificación del cambio.** Agregar RF-003-11 y RF-003-12 a `verificacion.md`.
   *Listo cuando:* los dos requisitos figuran con su estado y evidencia, sin ❌.
   *Commit:* `docs(003): verificación del video promocional`
