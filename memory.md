@@ -69,4 +69,5 @@
 
 <!-- Completar a medida que aparezcan. Copiar también a docs/PROMPTS.md -->
 - **Git Bash convierte argumentos que empiezan con `/`** (`--base-href /` → `C:/Program Files/Git/`). Anteponer `MSYS_NO_PATHCONV=1`. Se detectó porque Lighthouse daba NO_FCP.
+- **Test en rojo: ¿aserción o excepción?** Si el test falla con una excepción (selector inválido, `undefined`), el bug está en el test, no en el código. Ver docs/PROMPTS.md, error 3.
 - **Windows: no usar `python` en comandos.** Sin Python instalado abre el instalador de la Store y el comando queda colgado. Para editar archivos desde la terminal usar `node -e` o las herramientas de edición.
